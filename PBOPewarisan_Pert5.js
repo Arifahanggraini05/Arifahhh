@@ -23,6 +23,18 @@ class Student extends People {
     }
 }
 
+class Tambahan extends People {
+    constructor(name, address, nim, ukm) {
+        super(name, address);
+        this.nim = nim;
+        this.ukm = ukm;
+    }
+    tampilkanInformasi() {
+        super.tampilkanInformasi();
+        console.log(`NIM: ${this.nim}`, `UKM: ${this.ukm}`)
+    }
+}
+
 // Penggunaan kelas turunan
-const mahasiswa1 = new Mahasiswa("Arifah", "Jl. Merdeka Barat No 45", "00010030");
+const mahasiswa1 = new Tambahan("Arifah", "Jl. Merdeka Barat No 45", "00010030", "MAPALA");
 mahasiswa1.tampilkanInformasi();
